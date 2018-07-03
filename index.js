@@ -20,10 +20,10 @@ module.exports = function( THREE ) {
 
 		this.domElement = ( domElement !== undefined ) ? domElement : document;
 
-		// Set to false to disable this control
+		// 设置为false禁用组件
 		this.enabled = true;
 
-		// "target" sets the location of focus, where the object orbits around
+		// "target" 设置焦点位置, 轨道将围着这个点运行
 		this.target = new THREE.Vector3();
 
 		// How far you can dolly in and out ( PerspectiveCamera only )
@@ -34,21 +34,20 @@ module.exports = function( THREE ) {
 		this.minZoom = 0;
 		this.maxZoom = Infinity;
 
-		// How far you can orbit vertically, upper and lower limits.
-		// Range is 0 to Math.PI radians.
+		// 限制垂直轨道运动范围
 		this.minPolarAngle = 0; // radians
 		this.maxPolarAngle = Math.PI; // radians
 
-		// How far you can orbit horizontally, upper and lower limits.
-		// If set, must be a sub-interval of the interval [ - Math.PI, Math.PI ].
+		// 限制水平轨道运动范围 设置形式 [ - Math.PI, Math.PI ].
 		this.minAzimuthAngle = - Infinity; // radians
 		this.maxAzimuthAngle = Infinity; // radians
 
-		// Set to true to enable damping (inertia)
-		// If damping is enabled, you must call controls.update() in your animation loop
+		// 是否开启阻尼(惯性)
+		// 如果启用了阻尼，则必须在动画循环中调用controls.update()
 		this.enableDamping = false;
 		this.dampingFactor = 0.25;
 
+		// 控制是否开启缩放
 		// This option actually enables dollying in and out; left as "zoom" for backwards compatibility.
 		// Set to false to disable zooming
 		this.enableZoom = true;
