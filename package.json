@@ -55,7 +55,7 @@
   ],
   "license": "MIT",
   "main": "index.js",
-  "name": "three-orbit-controls",
+  "name": "@puge/three-orbit-controls",
   "repository": {
     "type": "git",
     "url": "git://github.com/mattdesl/three-orbit-controls.git"
