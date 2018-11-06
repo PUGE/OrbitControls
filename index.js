@@ -288,6 +288,10 @@ module.exports = function( THREE ) {
 			sphericalDelta.phi -= angle;
 
 		}
+		this.scaling = function (scal) {
+			scale = scal
+			scope.update()
+		}
 
 		var panLeft = function() {
 
